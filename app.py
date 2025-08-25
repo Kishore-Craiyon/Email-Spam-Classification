@@ -6,6 +6,7 @@ import numpy as np
 from win32com.client import Dispatch
 
 def speak(text):
+	# Initialize the COM library
 	pythoncom.CoInitialize()
 	speak=Dispatch(("SAPI.SpVoice"))
 	speak.Speak(text)
